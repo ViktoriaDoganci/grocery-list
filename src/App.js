@@ -1,27 +1,47 @@
-
+import { useState } from 'react';
+import {data} from './data';
 import './App.css';
-import image from  './shoping.jpg';
-import imageTwo from  './men.jpg';
-import {GroceryList} from  './GroceryList';
-
 
 function App() {
-  return (
-    <div className='app'>
-       <div className="container">
-      <img src={image} width="300px" alt="shopping"/>
-      </div>
-      <div className="container">
-      <h1>Grocery list</h1>
-      </div>
-      <GroceryList />
-      <div className="container">
-      <img src={imageTwo} width="300px" alt="men"/>
-      
-
-      </div>
+  const[doing,SetDoing] = useState(data);
+  const[showText,setShowText]=useState(false);
+  const removeTask = (id) => {
+    let newTasks= doing.filter((doin) => doin.id !== id);
+    SetDoing(newTasks)
+  }
+  const showTextClick = (item) => {
+    item.showMore=!item.showMore
+    setShowText(!showText)
+  }
+  return(
+    <div>
+    <div className='container'>
+      <h1>{doing.length} - things left to do for my happiness today</h1>
     </div>
-  );
+    {doing.map((doin => {
+      const{ id, task, text, image,showMore} = doin;
+      return(
+        <div key={id}>
+        <div className='container'>
+          <h2>{id}.{task}</h2>
+           </div>
+           <div className='container'>
+          <img src={image} width="500px"/>
+           </div>
+
+           <div className='container'>
+          <p>{showMore?text : text.substring(0,96)+"..."}
+          <button onClick={() => showTextClick(doin)}>{showMore ? "Show less":"Show more"}</button></p>
+           </div>
+           <div className='container'>
+          <button className="btn" onClick={() => removeTask(id)}>Done</button>
+           </div>
+           </div>
+           
+      )
+    }))}
+    </div>
+  )
 }
 
 export default App;

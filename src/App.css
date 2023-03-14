@@ -1,55 +1,79 @@
-body {
-  background-color: #62c2c8;
+body{
+  background-color: #E5B8F4;
 }
-.app{
-  background-color: white;
-  min-height: 80hv;
-  width: 400px;
-  margin: 20px auto;
-}
-.crossed{
-  text-decoration: line-through 2px red;
-  background-color: #f0f0f0;
-}
-ul,li{
-list-style-type: none;
-padding:10px;
-margin:0px;
-font-family: 'Montserrat', sans-serif;
-}
-h1{
-  font-family: 'Montserrat', sans-serif;
-}
-.container{
-  display: flex;
-  justify-content: center;
-}
-.add{
-  margin-top: 5px;
-  background-color: #65aa06;
-  padding: 10px;
-  border: none;
-  width: 70%;
-  color: white;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-}
-.delete{
-  margin-bottom: 5px;
-  background-color: #d30100;
-  padding: 10px;
-  border: none;
-  width: 70%;
-  color: white;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-}
-input{
-  flex: 1;
-  padding:8px;
-  margin: 10px;
-  font-family: 'Montserrat', sans-serif;
-}
+
 img{
-  border-radius: 50%;
+  border-radius: 10px;
 }
+.container {
+
+  display: flex;
+
+  justify-content: center;
+
+}
+h1 {
+
+  letter-spacing: 2px;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: 'DM Serif Display', serif;
+  color: #2D033B;
+}
+
+h2 {
+
+  font-size: 26px;
+
+  letter-spacing: 2px;
+
+  font-family: 'DM Serif Display', serif;
+  color: #2D033B;
+
+}
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+
+  cursor: pointer;
+
+  border: 1px solid transparent;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  color: #fff;
+
+  background-color: #D800A6;
+
+  align-self: center;
+
+  padding: 10px;
+  
+
+}
+
+p {
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 18px;
+}
+
+button {
+
+  background: white;
+
+  border: none;
+
+  font-size: 18px;
+
+  color: #D800A6
+  
+}
+
